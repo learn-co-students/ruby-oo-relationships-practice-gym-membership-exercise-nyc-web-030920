@@ -18,7 +18,7 @@ class Gym
   end
 
   def lifters #Get a list of all the lifters that have a membership to a specific gym
-    self.memberships.map do |memberships|
+      memberships.map do |memberships|
       memberships.lifter
     end
   end
@@ -32,8 +32,9 @@ class Gym
   def lift_total #Get the combined lift total of every lifter has a membership to that gym
     total = 0
     lifters.each do |lifter|
-      lift_total += lifter.lift_total
+      total += lifter.lift_total
     end
     total 
   end
+  
 end

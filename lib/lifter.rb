@@ -35,7 +35,7 @@ class Lifter
     Lifter.all.count
   end
 
-  def avg_lift_total #Get the average lift total of all lifters
+  def self.avg_lift_total #Get the average lift total of all lifters
     avg_lift_total = 0
     Lifter.all.each do |lifter|
       avg_lift_total += lifter.lift_total
@@ -44,10 +44,10 @@ class Lifter
   end
 
   def total_cost #Get the total cost of a specific lifter's gym memberships
-    @total = 0
-    gyms.each do |gym|
-    @total += gym.cost 
+    total = 0
+    memberships.each do |gym|
+    total += gym.cost 
   end
-  @total 
+  total 
   end 
 end
