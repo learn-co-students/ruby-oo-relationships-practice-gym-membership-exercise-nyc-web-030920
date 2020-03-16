@@ -1,5 +1,5 @@
 class Membership
-  attr_reader :cost
+  attr_reader :cost, :lifter, :gym 
   @@memberships = []
 
   def initialize(cost)

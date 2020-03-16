@@ -18,13 +18,13 @@ class Gym
   end
 
   def lifters #Get a list of all the lifters that have a membership to a specific gym
-    self.memberships.select do |memberships|
+    self.memberships.map do |memberships|
       memberships.lifter
     end
   end
 
   def member_names #Get a list of the names of all lifters that have a membership to that gym
-    lifters.select do |member|
+    lifters.map do |member|
       member.name
     end
   end

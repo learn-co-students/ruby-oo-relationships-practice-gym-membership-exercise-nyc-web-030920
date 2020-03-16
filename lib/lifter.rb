@@ -26,7 +26,7 @@ class Lifter
   end
 
   def gyms #Get a list of all the gyms that a specific lifter has memberships to
-    memberships.select do |membership|
+    memberships.map do |membership|
       membership.gym 
     end
   end
